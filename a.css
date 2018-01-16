@@ -285,7 +285,7 @@ body {
     height: 100%;
     background: #E6686A;
     border-radius: 2px;
-    /* transition: all 0.3s; */
+    transition: all 0.3s;
   }
   section.portfolio > nav .bar.state-1 .bar-inner{
     margin-left: 0;

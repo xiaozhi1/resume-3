@@ -13,6 +13,12 @@ window.Model = function(options){
         },
         fetch:function(){
             var query = new AV.Query(resourceName);
+            
+            var now = new Date()
+            query.lessThanOrEqualTo('createdAt',now);//今天
+            query.limit(10);//最多返回10条结果
+            // query.descending('createdAt'); //先不倒叙
+
             return query.find()    // Promis 对象
         },
         save:function(object){

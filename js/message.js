@@ -33,9 +33,14 @@
             let myForm = this.form
             let content = myForm.querySelector('input[name=content]').value
             let name = myForm.querySelector('input[name=name]').value
+            if(name === ' ' ){
+                alert('请输入姓名')
+            }else if( content === ' '){
+                alert('请输入内容')
+            }else{
                 this.model.save({
-                        'name':name,'content':content
-                    }).then(function(object) {
+                    'name':name,'content':content
+                }).then(function(object) {
                     let li = document.createElement('li')
                     li.innerText = `${object.attributes.name} : ${object.attributes.content}`
                     let messageList = document.querySelector('#messageList')
@@ -44,6 +49,7 @@
                     myForm.querySelector('input[name=name]').value = ''
                     console.log(object)
                 })
+            }
         }
     })
     

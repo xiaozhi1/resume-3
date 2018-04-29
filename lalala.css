@@ -1,0 +1,40 @@
+
+/*   重新下载pdf，
+*     <div class="progressBar" >
+*        <div class="progress" style="width: 58%"></div>
+*     </div>
+*    把中间的style移到上面去
+*/
+
+.message {
+  display: none;
+}
+
+section.skills .progressBar>.progress {
+  background: red;
+  height: 100%;
+  width: 70%;
+  border-radius: 2px;
+  
+}
+section.skills .progressBar {
+  background: #efefef;
+  height: 5px;
+  border-radius: 2px;
+  margin: 4px 0 40px;
+  overflow: hidden
+}
+
+
+#topNavBar{
+  position: absolute;
+  top: 1px;
+}
+
+.logo{
+  display: none;
+}
+#experience{
+  margin-top: 100px;
+  padding-top: 100px;
+}
